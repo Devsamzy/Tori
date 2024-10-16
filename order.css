@@ -1,0 +1,193 @@
+.subnav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-align: center;
+    background: var(--bg);
+    color: #fff;
+   border-collapse: collapse;
+
+}
+.subnav li{
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    justify-content: center;
+    border: 0.5px solid #000;
+    border-collapse: collapse;
+}
+
+#on{
+    background: #777777;
+    /* width: fit-content; */
+}
+marquee{
+  background-color: #5E5E5E;
+  color: #FF6800;
+  font-size: 70px;
+  
+  font-weight: 900;
+  border-top: #2D2D2D solid 7px;
+  border-bottom: #2D2D2D solid 7px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 1s;
+  animation: 1s;
+
+}
+.all{
+    border: #000 0.5px solid;
+}
+.all .row{
+    display: grid;
+    grid-template-rows: 3fr 3fr;
+    /*border: #040070 1px solid;*/
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    /* margin-top: 50px; */
+    /* justify-content: center; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px
+}
+.all #img{
+    border-radius: 1px;
+    width: 100%;
+    /* height: 300px; */
+    border: #040070 0.5px solid;
+    /* width: 100%; */
+    /* grid-column: 10px; */
+    display: flex;
+    padding: 3px;
+    /* margin: 10px; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    /* box-shadow: 0px 0px 5px 0px #000000; */
+    background-color: #ffffff65;
+}
+.all #img .info{
+    bottom: 3px;
+    z-index: 10;
+    color: #fff;
+    right: 3px;
+    left: 3px;
+    /* padding: 10px; */
+    height: 0px;
+    transition: 1s ease-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-delay: 0.1s;
+    backdrop-filter: blur(1.8px);
+    margin-bottom: 0;
+    position: absolute;
+    background: #00000098;
+}
+.all #img:hover .info{
+    padding: 20px 10px ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 0.5s;
+    height: fit-content;
+}
+.all .img{
+    width: 100%;
+    justify-content: center;
+    position: relative;
+
+}
+
+.price{
+    background-color: #BF400B;
+    color: white;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    /* margin: 10px; */
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 1px white solid;
+}
+.product-item{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+.product-thumbnail{
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 30px;
+  position: relative;
+  top: 0;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; 
+}
+.product-title,.product-price{
+  color: #332520;
+  margin-top: 10px
+}
+.product-price{
+  margin-bottom: 20px
+}
+.product-item .icon-cross {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      background: #2F2F2F;
+      bottom: 15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      margin-bottom: -17.5px;
+      border-radius: 50%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; 
+  
+}
+      
+.product-item .icon-cross img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+        
+        
+.product-item:before {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      content: "";
+      background: #D05E3291;
+      height: 0%;
+      z-index: -1;
+      border-radius: 10px;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; }
+      
+      
+.product-item:hover .product-thumbnail {
+      top: -25px; }
+.product-item:hover .icon-cross {
+      bottom: 0;
+      opacity: 1;
+      visibility: visible; }
+.product-item:hover:before {
+      height: 70%; 
+  
+}
